@@ -164,6 +164,9 @@ namespace WystawianieFS.Services
                     podpisy.AddCell(new Cell().Add(new Paragraph("Odebrał(a): ..............................").SetTextAlignment(TextAlignment.CENTER))
                         .SetBorder(Border.NO_BORDER));
                     document.Add(podpisy);
+                    document.Add(new Paragraph("\n\n"));
+                    document.Add(new Paragraph($"Termin płatności wynosi 14 dni od daty wystawienia dokumentu ({fs.DataWystawienia.AddDays(14).ToShortDateString()}).")
+                            .SetTextAlignment(TextAlignment.LEFT));
                     document.Close();
                 }
             }
