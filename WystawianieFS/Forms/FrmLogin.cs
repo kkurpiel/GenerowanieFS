@@ -63,6 +63,10 @@ namespace WystawianieFS
             {
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                     e.Handled = true;
+                if(e.KeyChar == (char)Keys.Enter)
+                {
+                    btn_Zaloguj_Click(sender, e);
+                }
             }
             catch (Exception ex) 
             {

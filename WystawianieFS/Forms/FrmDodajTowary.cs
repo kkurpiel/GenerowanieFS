@@ -15,10 +15,8 @@ namespace WystawianieFS.Forms
             {
                 this.WybraneTowary = WybraneTowary;
                 InitializeComponent();
-                var waluty = dbService.GetUniqWaluty();
-                cmbBx_waluta.Items.Clear();
-                cmbBx_waluta.Items.AddRange(waluty.ToArray());
                 OdswiezListeTowarow();
+                OdswiezSortowanieWalut();
             }
             catch (Exception ex) 
             {
@@ -92,6 +90,19 @@ namespace WystawianieFS.Forms
                 logger.Error(ex.Message);
             }
         }
+        private void OdswiezSortowanieWalut()
+        {
+            try
+            {
+                var waluty = dbService.GetUniqWaluty();
+                cmbBx_waluta.Items.Clear();
+                cmbBx_waluta.Items.AddRange(waluty.ToArray());
+            }
+            catch(Exception ex)
+            {
+                logger.Error(ex.Message);
+            }
+        }
 
         private void btn_dodajNowyTowar_Click(object sender, EventArgs e)
         {
@@ -99,6 +110,7 @@ namespace WystawianieFS.Forms
             {
                 FrmDodajNowyTowar frmDodajNowyTowar = new FrmDodajNowyTowar();
                 frmDodajNowyTowar.ShowDialog();
+                OdswiezSortowanieWalut();
                 OdswiezListeTowarow();
             }
             catch (Exception ex)

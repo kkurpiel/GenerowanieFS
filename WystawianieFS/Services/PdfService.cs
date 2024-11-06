@@ -148,8 +148,8 @@ namespace WystawianieFS.Services
                     podsWS.AddCell(new Cell(2, 1).SetBorder(Border.NO_BORDER).Add(podsumowanie));
                     document.Add(podsWS);
 
-                    var razem = podsum.Sum(x => x.WartoscBrutto);
-                    document.Add(new Paragraph($"Razem do zapłaty: {Math.Round(razem ?? 0, 2)} ")
+                    var razem = Math.Round(podsum.Sum(x => x.WartoscBrutto) ?? 0, 2);
+                    document.Add(new Paragraph($"Razem do zapłaty: {razem} ")
                         .SetBorder(Border.NO_BORDER)
                         .SetTextAlignment(TextAlignment.RIGHT)
                         .SetBold());

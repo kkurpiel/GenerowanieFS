@@ -34,7 +34,7 @@ namespace WystawianieFS.Forms
                 if (!string.IsNullOrEmpty(txtBx_cenaNetto.Text)
                     && !string.IsNullOrEmpty(txtBx_ilosc.Text)
                     && !string.IsNullOrEmpty(cmbBx_waluta.Text)
-                    && decimal.TryParse(txtBx_cenaNetto.Text, out decimal cn)
+                    && decimal.TryParse(txtBx_cenaNetto.Text.Replace(".",","), out decimal cn)
                     && decimal.TryParse(txtBx_ilosc.Text, out decimal ilosc))
                 {
                     var selItem = cmbBx_towar.SelectedItem;

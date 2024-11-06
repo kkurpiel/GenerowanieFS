@@ -152,6 +152,7 @@
             Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Generowanie Faktur - logowanie";
+            KeyPress += txtBx_pin_KeyPress;
             pan1.ResumeLayout(false);
             pan1.PerformLayout();
             pan2.ResumeLayout(false);

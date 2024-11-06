@@ -1,6 +1,6 @@
 USE [WystawianieFS_test]
 GO
-/****** Object:  Table [dbo].[FS_Cena]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  Table [dbo].[FS_Cena]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19,7 +19,7 @@ CREATE TABLE [dbo].[FS_Cena](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Towary]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  Table [dbo].[Towary]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -40,7 +40,7 @@ CREATE TABLE [dbo].[Towary](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Ceny]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  Table [dbo].[Ceny]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -60,7 +60,7 @@ CREATE TABLE [dbo].[Ceny](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  View [dbo].[PozycjeNaFakturzeView]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  View [dbo].[PozycjeNaFakturzeView]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -86,7 +86,7 @@ FROM dbo.Ceny INNER JOIN dbo.FS_Cena
 			  INNER JOIN dbo.Towary 
 	ON dbo.Ceny.TowarID = dbo.Towary.ID
 GO
-/****** Object:  Table [dbo].[ArchiwumCen]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  Table [dbo].[ArchiwumCen]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -108,7 +108,7 @@ CREATE TABLE [dbo].[ArchiwumCen](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[DaneLogowania]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  Table [dbo].[DaneLogowania]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -129,7 +129,7 @@ CREATE TABLE [dbo].[DaneLogowania](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Firmy]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  Table [dbo].[Firmy]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -152,7 +152,7 @@ CREATE TABLE [dbo].[Firmy](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[FS]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  Table [dbo].[FS]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -176,7 +176,7 @@ CREATE TABLE [dbo].[FS](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Kontrahenci]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  Table [dbo].[Kontrahenci]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -234,7 +234,7 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[FS_Cena] CHECK CONSTRAINT [FK_FS_Towary_FS_FSID]
 GO
-/****** Object:  StoredProcedure [dbo].[PobierzDaneFaktury]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  StoredProcedure [dbo].[PobierzDaneFaktury]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -268,7 +268,7 @@ BEGIN
         fs.ID = @FakturaID;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[PobierzFakturyKontrahenta]    Script Date: 06.11.2024 12:01:13 ******/
+/****** Object:  StoredProcedure [dbo].[PobierzFakturyKontrahenta]    Script Date: 06.11.2024 13:32:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -300,6 +300,147 @@ BEGIN
     END
 END;
 GO
+USE [WystawianieFS_test]
+GO
+
+/****** Object:  Trigger [dbo].[DodajCeneBrutto]    Script Date: 06.11.2024 13:33:42 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Konrad,,Kurpiel>
+-- Create date: <2024/10/24>
+-- Description:	<Updating CenaBrutto>
+-- =============================================
+CREATE TRIGGER [dbo].[DodajCeneBrutto]
+   ON  [dbo].[Ceny]
+   AFTER INSERT
+AS 
+BEGIN
+	SET NOCOUNT ON;
+
+    UPDATE c SET c.CenaBrutto = i.CenaNetto + (i.CenaNetto * t.VAT/100)
+		FROM dbo.Ceny c
+		JOIN inserted i ON c.ID = i.ID
+		JOIN Towary t ON c.TowarID = t.ID;
+
+END
+GO
+
+ALTER TABLE [dbo].[Ceny] ENABLE TRIGGER [DodajCeneBrutto]
+GO
+USE [WystawianieFS_test]
+GO
+
+/****** Object:  Trigger [dbo].[PrzeniesDoArchiwumCen]    Script Date: 06.11.2024 13:34:04 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+CREATE TRIGGER [dbo].[PrzeniesDoArchiwumCen]
+   ON  [dbo].[Ceny]
+   AFTER UPDATE
+AS 
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Przenieś ceny do ArchiwumCen, gdy Ilosc = 0
+    INSERT INTO dbo.ArchiwumCen (TowarID, DataNabycia, CenaNetto, CenaBrutto, Waluta, Ilosc, DataWyzerowania, CenaID)
+    SELECT 
+        c.TowarID, 
+        c.DataNabycia, 
+        c.CenaNetto, 
+        c.CenaBrutto, 
+        c.Waluta, 
+        c.Ilosc, 
+        CAST(SYSDATETIME() AS datetime2(7)) AS DataWyzerowania,
+		c.ID
+    FROM dbo.Ceny c
+    WHERE Ilosc = 0 
+      AND ID IN (SELECT ID FROM inserted);
+    
+	-- Zaktualizuj relacje w FS_Cena przy przeniesieniu zmień relacje na ArchiwumCen
+	UPDATE dbo.FS_Cena 
+	SET CenaID = NULL,
+    ArchiwumCenID = (SELECT a.ID 
+                     FROM dbo.ArchiwumCen a 
+                     WHERE a.CenaID IN (SELECT ID FROM inserted) 
+                     AND a.CenaID IS NOT NULL)
+	WHERE CenaID IN (SELECT ID FROM inserted WHERE Ilosc = 0);
+
+    -- Usunięcie przeniesionych cen z tabeli Ceny
+    DELETE FROM dbo.Ceny
+    WHERE Ilosc = 0 
+      AND ID IN (SELECT ID FROM inserted);
+END;
+GO
+
+ALTER TABLE [dbo].[Ceny] ENABLE TRIGGER [PrzeniesDoArchiwumCen]
+GO
+
+
+USE [WystawianieFS_test]
+GO
+
+/****** Object:  Trigger [dbo].[UstawAktualny]    Script Date: 06.11.2024 13:34:34 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+
+CREATE TRIGGER [dbo].[UstawAktualny]
+   ON  [dbo].[Ceny]
+   AFTER INSERT, UPDATE
+AS 
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Zaktualizuj flagi Aktualny dla wszystkich towarów
+    UPDATE dbo.Ceny 
+    SET Aktualny = 0 
+    WHERE TowarID IN (SELECT DISTINCT TowarID FROM inserted) 
+      AND Waluta IN (SELECT DISTINCT Waluta FROM inserted) 
+      AND Aktualny = 1;
+
+    -- Ustaw najstarszą cenę jako aktualną dla każdego towaru w danej walucie
+    UPDATE dbo.Ceny
+    SET Aktualny = 1
+    WHERE ID IN (
+        SELECT TOP 1 ID 
+        FROM dbo.Ceny
+        WHERE TowarID IN (SELECT DISTINCT TowarID FROM inserted) 
+          AND Waluta IN (SELECT DISTINCT Waluta FROM inserted) 
+          AND Ilosc > 0
+        ORDER BY DataNabycia ASC
+    );
+END;
+GO
+
+ALTER TABLE [dbo].[Ceny] ENABLE TRIGGER [UstawAktualny]
+GO
+
+
+
+
+
+
 EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPane1', @value=N'[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]
 Begin DesignProperties = 
    Begin PaneConfigurations = 

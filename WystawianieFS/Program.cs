@@ -16,16 +16,16 @@ namespace WystawianieFS
         static void Main()
         {
             var appsettingsFile = Path.Combine(Directory.GetCurrentDirectory(), "config.json");
-            ////////////////////////////////////  ZAPIS CONNECTION STRING DO PLIKU config.json    ///////////////////////////
-            // string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=WystawianieFS;Trusted_Connection=True;"; //
-            // var connStrSerial = JsonSerializer.Serialize(new AppConfig() { ConnectionString = connectionString });      // 
-            // using (var file = File.OpenWrite(appsettingsFile))                                                          //
-            // {                                                                                                           // 
-            //     var jsonBytes = Encoding.UTF8.GetBytes(connStrSerial);                                                  //
-            //     file.SetLength(0);                                                                                      //
-            //     file.Write(jsonBytes, 0, jsonBytes.Length);                                                             //
-            // }                                                                                                           //
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////  ZAPIS CONNECTION STRING DO PLIKU config.json    ////////////////////////////////
+            // string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=WystawianieFS_prod;Trusted_Connection=True;"; //
+            // var connStrSerial = JsonSerializer.Serialize(new AppConfig() { ConnectionString = connectionString });           // 
+            // using (var file = File.OpenWrite(appsettingsFile))                                                               //
+            // {                                                                                                                // 
+            //     var jsonBytes = Encoding.UTF8.GetBytes(connStrSerial);                                                       //
+            //     file.SetLength(0);                                                                                           //
+            //     file.Write(jsonBytes, 0, jsonBytes.Length);                                                                  //
+            // }                                                                                                                //
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             if (!File.Exists(appsettingsFile))
             {
                 MessageBox.Show("B³¹d po³¹czenia z baz¹ danych.");
