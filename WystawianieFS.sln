@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WystawianieFS", "Wystawiani
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerowanieXLSX", "GenerowanieXLSX\GenerowanieXLSX.csproj", "{7ABC1533-F9AB-496B-84AD-E48149087325}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerowanieHasla", "GenerowanieHasla\GenerowanieHasla.csproj", "{8EB8960C-B5F4-4998-B521-89EC38F3526D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7ABC1533-F9AB-496B-84AD-E48149087325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ABC1533-F9AB-496B-84AD-E48149087325}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ABC1533-F9AB-496B-84AD-E48149087325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB8960C-B5F4-4998-B521-89EC38F3526D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB8960C-B5F4-4998-B521-89EC38F3526D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB8960C-B5F4-4998-B521-89EC38F3526D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB8960C-B5F4-4998-B521-89EC38F3526D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
